@@ -77,9 +77,9 @@ class ArraController extends Controller
             'peso' => 'required',
             'precio' => 'required',
             'grosor' => 'required',
-            'imagen1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'imagen2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'imagen3' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'imagen1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096',
+            'imagen2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096',
+            'imagen3' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096',
 
         ]);
         //movemos nuestras imagenes a nuestra carpeta storage

@@ -34,9 +34,9 @@ class ArrasSeeder extends Seeder
                         DB::table('arras')->insert([
                             'clave' => 'ARRDEM0'.$contador,
                             'nombre'=> 'Arra '.$frente->nombre_frente.'/'.$vuelta->nombre_vuelta.'/'.$size->diametro.'mm/'.$metal->nombre_metal , 
-                            'imgFrente'=>'upload-arras/QdeCK8yWgmBoGJKm9mzcikJeP7gboXL3aBndywLX.jpg',
-                            'imgVuelta'=>'',
-                            'imgOpcional'=>'',
+                            'imgFrente'=>'upload-arras/f2ZzfQdRhEjmYC0ic0A8pKUe95tBsXpErcFT6qdV.png',
+                            'imgVuelta'=>'upload-arras/jk33xhlKjFmGolux3nTrCfxumuC9CMYgHovopE1K.png',
+                            'imgOpcional'=>'upload-arras/PD5nTeUPu0DWo9DUYKOzesqeopXo7hdkOfyxF7e1.png',
                             'peso'=>1,
                             'precio'=>1,
                             'grosor'=>1,

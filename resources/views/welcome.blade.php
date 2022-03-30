@@ -72,9 +72,7 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+
                     @endauth
                 </div>
             @endif
@@ -96,5 +94,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- -->
+        <footer class="bg-dark text-white">
+            <nav class="row">
+                <a href="#" class="col-3 text-reset text-uppercase d-flex align-items-center">hola</a>
+            </nav>
+        </footer>
     </body>
 </html>
