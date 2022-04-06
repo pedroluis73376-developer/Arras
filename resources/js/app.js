@@ -31,6 +31,7 @@ Vue.component('eliminar-metal', require('./components/EliminarMetal.vue').defaul
 Vue.component('eliminar-frente', require('./components/EliminarFrente.vue').default);
 Vue.component('eliminar-size', require('./components/EliminarSize.vue').default); 
 Vue.component('eliminar-vuelta', require('./components/EliminarVuelta.vue').default); 
+Vue.component('enviar-mensaje', require('./components/EnviarMensaje.vue').default); 
 
 
 /**

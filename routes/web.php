@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 //rutas del distribuidor
 Route::get('/distribuidores', 'DistribuidorController@index')->name('distribuidor.index')->middleware('auth');
@@ -72,5 +72,11 @@ Route::get('/arras/{arra}/edit', 'ArraController@edit')->name('arras.edit')->mid
 Route::put('/arras/{arra}', 'ArraController@update')->name('arras.update')->middleware('auth');
 
 //rutas de catalogo de arras y realizar cotizaciones
-Route::get('/productos', 'CatalogoController@index')->name('catalogo.index')->middleware('auth');
+Route::get('/productos', 'CatalogoController@index')->name('catalogo.index');
 Route::get('/productos/{arra}', 'CatalogoController@show')->name('catalogo.show')->middleware('auth');
+
+//ruta de contacto
+Route::get('/mensajes', 'ContactoController@index')->name('contactos.index');
+Route::get('/mensaje/create', 'ContactoController@create')->name('contactos.create');
+Route::post('/contactos', 'ContactoController@store')->name('contactos.store');
+Route::put('/contactos/{contacto}', 'ContactoController@update')->name('contactos.update')->middleware('auth');

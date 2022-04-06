@@ -82,7 +82,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <label for="">Imagen Vuelta:</label>
-                                        <img src="/storage/{{$arra->imgVuelta}}" alt="" class="img-fluid">
+                                        <img style="width:100px; heigth:100px" src="/storage/{{$arra->imgVuelta}}" alt="" class="img-fluid">
                                     </div>
                                 </div>
 
@@ -93,7 +93,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <label for="">Imagen Opcional:</label>
-                                        <img src="/storage/{{$arra->imgOpcional}}" alt="" class="img-fluid">
+                                        <img style="width:100px; heigth:100px" src="/storage/{{$arra->imgOpcional}}" alt="" class="img-fluid">
                                     </div>
                                 </div>
 

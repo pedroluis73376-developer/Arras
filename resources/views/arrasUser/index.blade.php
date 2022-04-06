@@ -23,7 +23,7 @@
 
 
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    <button type="button" class="btn btn-dark" data-toggle="modal"
                                         data-target="#staticBackdrop{{$arra->id}}">
                                         Detalles
                                     </button>
@@ -56,7 +56,7 @@
                                                         <div class="carousel-inner">
                                                             <div class="carousel-item active">
                                                                 <img src="/storage/{{$arra->imgFrente}}"
-                                                                    class="d-block w-100" alt="...">
+                                                                    class="d-block w-100" style="height: 63vh" alt="...">
                                                                 <div class="carousel-caption d-none d-md-block">
 
                                                                 </div>
@@ -66,7 +66,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <img src="/storage/{{$arra->imgVuelta}}"
-                                                                    class="d-block w-100" alt="...">
+                                                                    class="d-block w-100" style="height: 63vh" alt="...">
                                                                 <div class="carousel-caption d-none d-md-block">
 
 
@@ -78,7 +78,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <img src="/storage/{{$arra->imgOpcional}}"
-                                                                    class="d-block img-fluid" alt="...">
+                                                                    class="d-block w-100" style="height: 63vh" alt="...">
                                                                 <div class="carousel-caption d-none d-md-block">
 
                                                                 </div>
@@ -128,4 +128,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+@include('layouts/footer')
 @endsection
