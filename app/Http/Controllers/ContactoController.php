@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Contacto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CrearContacto;
 
 class ContactoController extends Controller
 {
@@ -50,6 +52,10 @@ class ContactoController extends Controller
 
         ]
         );
+        //mandamos el email de notificacion de la siguiente manera
+        Mail::to('pedroluis73376@gmail.com')
+        ->send(new CrearContacto($request));
+
         
        return redirect(route('index'));
 

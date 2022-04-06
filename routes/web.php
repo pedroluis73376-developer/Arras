@@ -77,6 +77,6 @@ Route::get('/productos/{arra}', 'CatalogoController@show')->name('catalogo.show'
 
 //ruta de contacto
 Route::get('/mensajes', 'ContactoController@index')->name('contactos.index');
-Route::get('/mensaje/create', 'ContactoController@create')->name('contactos.create');
+Route::get('/mensajes/create', 'ContactoController@create')->name('contactos.create');
 Route::post('/contactos', 'ContactoController@store')->name('contactos.store');
 Route::put('/contactos/{contacto}', 'ContactoController@update')->name('contactos.update')->middleware('auth');
