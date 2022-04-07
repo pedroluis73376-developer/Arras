@@ -4,73 +4,52 @@ namespace App\Http\Controllers;
 
 use App\arra;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 
 class ArraController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
+        //aqui utilizamos las gate para dar acceso si el usuario es administrador o gerente 
+        if (Gate::allows('Gerente-Administrador')) {
         $arras = arra::all();
         return view('arrasADM.index', compact('arras'));
+        }
+        return redirect(route('index'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\arra  $arra
-     * @return \Illuminate\Http\Response
-     */
+  
     public function show(arra $arra)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\arra  $arra
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function edit(arra $arra)
     {
+        if (Gate::allows('Gerente-Administrador')) {
         return view('arrasADM.edit', compact('arra'));
+        }
+        return redirect(route('index'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\arra  $arra
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function update(Request $request, arra $arra)
     {
+        if (Gate::allows('Gerente-Administrador')) {
         //validamos los campos de nuestro formulario
         $data = request()->validate([
             'nombre' => 'required',
@@ -101,16 +80,15 @@ class ArraController extends Controller
         $arra->peso = $data['peso'];
         $arra->precio = $data['precio'];
         $arra->grosor = $data['grosor'];
+        $arra->updated_at = date('Y:m:d H:i:s');
         $arra->save();
         return redirect(route('arras.edit', ['arra' => $arra->id]));
     }
+        return redirect(route('index'));
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\arra  $arra
-     * @return \Illuminate\Http\Response
-     */
+}
+
+ 
     public function destroy(arra $arra)
     {
         //

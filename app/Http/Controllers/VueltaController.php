@@ -5,39 +5,33 @@ namespace App\Http\Controllers;
 use App\vuelta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class VueltaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $vueltas = vuelta::all();
         return view('vueltas.index',compact('vueltas'));
     }
+    return redirect(route('index'));
+    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
+        if (Gate::allows('Gerente-Administrador')) {
         //
         return view('vueltas.create');
     }
+    return redirect(route('index'));
+    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $data = request()->validate([
             'vuelta' => 'required | min:4'
         ]);
@@ -47,50 +41,34 @@ class VueltaController extends Controller
         ]);
         return redirect(action('VueltaController@index'));
     }
+    return redirect(route('index'));
+    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\vuelta  $vuelta
-     * @return \Illuminate\Http\Response
-     */
+  
     public function show(vuelta $vuelta)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\vuelta  $vuelta
-     * @return \Illuminate\Http\Response
-     */
+  
     public function edit(vuelta $vuelta)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\vuelta  $vuelta
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function update(Request $request, vuelta $vuelta)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\vuelta  $vuelta
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(vuelta $vuelta)
     {
+        if (Gate::authorize('Gerente')) {
         $vuelta->delete();
         return redirect(action('VueltaController@index'));
+    }
+    return redirect(action('VueltaController@index'));
     }
 }

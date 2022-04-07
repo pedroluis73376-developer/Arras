@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class arra extends Model
 {
+
+protected $fillable = [
+    'nombre','peso','precio','grosor','imagen1','imagen2','imagen3'
+];
+
       //funcion N:1 metales
       public function metal(){
         return $this->belongsTo(metal::class,'metales_id');

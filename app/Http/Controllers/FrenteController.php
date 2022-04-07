@@ -5,40 +5,32 @@ namespace App\Http\Controllers;
 use App\frente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class FrenteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  
     public function index()
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $frentes = frente::all();
         return view('frentes.index', compact('frentes'));
+        }
+        return redirect(route('index'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $frentes = frente::all();
         return view('frentes.create',compact('frentes'));
-        
+        }    
+        return redirect(route('index'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
+        if (Gate::allows('Gerente-Administrador')) {
         //
         $data = request()->validate([
             'nombre' => 'required | min:4',
@@ -50,52 +42,35 @@ class FrenteController extends Controller
             'tipo_frente' => $data['tipo_frente'],
         ]);
         return redirect(action('FrenteController@index'));
+
+    }    
+    return redirect(route('index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\frente  $frente
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(frente $frente)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\frente  $frente
-     * @return \Illuminate\Http\Response
-     */
     public function edit(frente $frente)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\frente  $frente
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request, frente $frente)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\frente  $frente
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(frente $frente)
     {
         //
+        if (Gate::authorize('Gerente')) {
         $frente->delete();
+        return redirect(action('FrenteController@index'));
+        }
         return redirect(action('FrenteController@index'));
     }
 }

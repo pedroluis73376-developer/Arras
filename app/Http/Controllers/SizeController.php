@@ -5,38 +5,33 @@ namespace App\Http\Controllers;
 use App\size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class SizeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $sizes=size::all();
         return view('sizes.index',compact('sizes'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('sizes.create');
+    return redirect(route('index'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
+    public function create()
+    {
+        if (Gate::allows('Gerente-Administrador')) {
+        return view('sizes.create');
+    }
+    return redirect(route('index'));
+    }
+
+    
     public function store(Request $request)
     {
+        if (Gate::allows('Gerente-Administrador')) {
         $data = request();
         DB::table('sizes')->insert([
            'diametro' => $data['size'],
@@ -44,51 +39,35 @@ class SizeController extends Controller
 
         return redirect(action('SizeController@index'));
     }
+    return redirect(route('index'));
+    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\size  $size
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(size $size)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\size  $size
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(size $size)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\size  $size
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, size $size)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\size  $size
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(size $size)
     {
+        if (Gate::authorize('Gerente')) {
         //
         $size->delete();
         redirect(action('SizeController@index'));
+    }
+    return redirect(action('SizeController@index'));
     }
 }
