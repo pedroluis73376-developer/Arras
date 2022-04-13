@@ -60,9 +60,8 @@
                                                                 <div class="carousel-caption d-none d-md-block">
 
                                                                 </div>
-                                                                <h5>First slide label</h5>
-                                                                <h6 class="text-dark">Some representative
-                                                                    placeholder content for the second slide.</h6>
+                                                                <h5>Nuestro Productos</h5>
+                                                                <h6 class="text-dark">Son creados con los mejores estandares de calidad</h6>
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <img src="/storage/{{$arra->imgVuelta}}"
@@ -71,10 +70,8 @@
 
 
                                                                 </div>
-                                                                <h5>Second slide label</h5>
-                                                                <h6 class="text-dark">Some representative
-                                                                    placeholder
-                                                                    content for the second slide.</h6>
+                                                                <h5>Un diseño perfecto para momentos perfectos</h5>
+                                                                <h6 class="text-dark">Encuentra lo ‘Mejor’ de lo ‘Mejor’</h6>
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <img src="/storage/{{$arra->imgOpcional}}"
@@ -82,9 +79,8 @@
                                                                 <div class="carousel-caption d-none d-md-block">
 
                                                                 </div>
-                                                                <h5>Third slide label</h5>
-                                                                <h6 class="text-dark">Some representative
-                                                                    placeholder content for the second slide.</h6>
+                                                                <h5>Tenemos un gran numero de combinaciones</h5>
+                                                                <h6 class="text-dark">Consigue una combinación perfecta</h6>
                                                             </div>
                                                         </div>
                                                         <button class="carousel-control-prev" type="button"
@@ -107,7 +103,7 @@
                                                     <button type="button" class="btn btn-secondary"
                                                         data-dismiss="modal">Cerrar</button>
 
-                                                    <button type="button" class="btn btn-primary">Cotizar</button>
+                                                    <a class="btn btn-primary" href="{{ route('arras.show', ['arra'=> $arra->id]) }}">Cotizar</a>
 
 
                                                 </div>

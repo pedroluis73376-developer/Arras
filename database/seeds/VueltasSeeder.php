@@ -13,49 +13,49 @@ class VueltasSeeder extends Seeder
     public function run()
     {
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Adobe Caslon Pro',
+            'nombre_vuelta' => 'ADOBE CASLON PRO',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Lucida Handwriting',
+            'nombre_vuelta' => 'LUCIDA HANDWRITING',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Sutro ExtraBold',
+            'nombre_vuelta' => 'SUTRO EXTRABOLD',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Freestyle',
+            'nombre_vuelta' => 'FREESTYLE',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Lucida Calligraphy',
+            'nombre_vuelta' => 'LUCIDA CALLIGRAPHY',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Yummi',
+            'nombre_vuelta' => 'YUMMI',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Halimum',
+            'nombre_vuelta' => 'HALIMUM',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 
         ]);
         DB::table('vueltas')->insert([
-            'nombre_vuelta' => 'Edwardian',
+            'nombre_vuelta' => 'EDWARDIAN',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
 

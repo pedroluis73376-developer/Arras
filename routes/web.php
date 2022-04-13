@@ -71,6 +71,9 @@ Route::post('/arras/{arra}', 'ArraController@store')->name('arras.store')->middl
 Route::get('/arras/{arra}/edit', 'ArraController@edit')->name('arras.edit')->middleware('auth');
 Route::put('/arras/{arra}', 'ArraController@update')->name('arras.update')->middleware('auth');
 
+//ruta para mostrar las arras y realizar la cotizacion
+Route::get('/arras/{arra}', 'ArraController@show')->name('arras.show');
+
 //rutas de catalogo de arras y realizar cotizaciones
 Route::get('/productos', 'CatalogoController@index')->name('catalogo.index');
 Route::get('/productos/{arra}', 'CatalogoController@show')->name('catalogo.show')->middleware('auth');
@@ -80,3 +83,6 @@ Route::get('/mensajes', 'ContactoController@index')->name('contactos.index');
 Route::get('/mensajes/create', 'ContactoController@create')->name('contactos.create');
 Route::post('/contactos', 'ContactoController@store')->name('contactos.store');
 Route::put('/contactos/{contacto}', 'ContactoController@update')->name('contactos.update')->middleware('auth');
+
+//ruta de cotizaciones
+Route::post('/cotizaciones', 'CotizacionesController@store')->name('cotizaciones.store');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\arra;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 
@@ -34,7 +35,11 @@ class ArraController extends Controller
   
     public function show(arra $arra)
     {
-        //
+        //mandamos mostrar la vista de la arra para realizar la cotizacion
+       
+            return view('arrasUser.cotizar',compact('arra'));
+        
+        
     }
 
  

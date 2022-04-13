@@ -18,7 +18,7 @@
                 <ul class="list-unstyled">
                     <li class="my-2"><a class="text-dark" href="{{route('catalogo.index')}}">Productos</a> </li>
                     <li class="my-2"><a class="text-dark" href="#">Perfil</a></li>
-                    <li class="my-2"><a class="text-dark" href="#">Contacto</a></li>
+                    <li class="my-2"><a class="text-dark" href="{{ route('contactos.create')}}">Contacto</a></li>
                 </ul>
             </div>
 

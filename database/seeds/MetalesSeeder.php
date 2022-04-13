@@ -13,63 +13,63 @@ class MetalesSeeder extends Seeder
     public function run()
     {
         DB::table('metals')->insert([
-            'nombre_metal' => 'imitacion plata',
+            'nombre_metal' => 'IMITACION PLATA',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'imitacion oro',
+            'nombre_metal' => 'IMITACION ORO',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'plata con baño de oro',
+            'nombre_metal' => 'PLATA CON BAÑO DE ORO',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'plata con baño de rodio',
+            'nombre_metal' => 'PLATA CON BAÑO DE RODIO',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'oro amarillo 10kt',
+            'nombre_metal' => 'ORO AMARILLO 10kt',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'oro blanco 10kt',
+            'nombre_metal' => 'ORO BLANCO 10kt',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'oro amarillo 14kt',
+            'nombre_metal' => 'ORO AMARILLO 14kt',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'oro blanco 14kt',
+            'nombre_metal' => 'ORO BLANCO 14kt',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          
 
         ]);
         DB::table('metals')->insert([
-            'nombre_metal' => 'oro 24kt',
+            'nombre_metal' => 'ORO 24kt',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
          

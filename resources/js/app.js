@@ -32,6 +32,7 @@ Vue.component('eliminar-frente', require('./components/EliminarFrente.vue').defa
 Vue.component('eliminar-size', require('./components/EliminarSize.vue').default); 
 Vue.component('eliminar-vuelta', require('./components/EliminarVuelta.vue').default); 
 Vue.component('enviar-mensaje', require('./components/EnviarMensaje.vue').default); 
+Vue.component('guardar-cotizacion', require('./components/GuardarCotizacion.vue').default); 
 
 
 /**

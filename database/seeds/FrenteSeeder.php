@@ -14,7 +14,7 @@ class FrenteSeeder extends Seeder
     {
         //no religiosos 
         DB::table('frentes')->insert([
-            'nombre_frente'=>'palomas',
+            'nombre_frente'=>'PALOMAS',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -22,7 +22,7 @@ class FrenteSeeder extends Seeder
         );
 
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Lo que dios une',
+            'nombre_frente'=>'LO QUE DIOS UNE',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -30,41 +30,41 @@ class FrenteSeeder extends Seeder
         );
 
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Centenario',
+            'nombre_frente'=>'CENTENARIO',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Maximiliano',
+            'nombre_frente'=>'MAXIMILIANO',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Novios',
+            'nombre_frente'=>'NOVIOS',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Anillos',
+            'nombre_frente'=>'ANILLOS',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Corazon',
+            'nombre_frente'=>'CORAZON',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );  DB::table('frentes')->insert([
-            'nombre_frente'=>'Valores Universales',
+            'nombre_frente'=>'VALORES UNIVERSALES',
             'tipo_frente'=>'NR',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -74,7 +74,7 @@ class FrenteSeeder extends Seeder
         //religiosos
 
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Crucifijo',
+            'nombre_frente'=>'CRUCIFIJO',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -82,7 +82,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Madona',
+            'nombre_frente'=>'MADONA',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -90,7 +90,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Madona Brazos Cruzados',
+            'nombre_frente'=>'MADONA BRAZOS CRUZADOS',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -98,7 +98,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Virgen de Guadalupe',
+            'nombre_frente'=>'VIRGEN DE GUADALUPE',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -106,7 +106,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Sagrado Corazon',
+            'nombre_frente'=>'SAGRADO CORAZON',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -114,7 +114,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'San benito',
+            'nombre_frente'=>'SAN BENITO',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -122,14 +122,14 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Dolorosa',
+            'nombre_frente'=>'DOLOROSA',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]
         );
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Espiritu Santo',
+            'nombre_frente'=>'ESPITU SANTO',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -138,7 +138,7 @@ class FrenteSeeder extends Seeder
 
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Divino Rostro',
+            'nombre_frente'=>'DIVINO ROSTRO',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -146,7 +146,7 @@ class FrenteSeeder extends Seeder
         );
         
         DB::table('frentes')->insert([
-            'nombre_frente'=>'Milagrosa',
+            'nombre_frente'=>'MILAGROSA',
             'tipo_frente'=>'R',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),

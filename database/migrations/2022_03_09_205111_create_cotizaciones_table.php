@@ -16,6 +16,8 @@ class CreateCotizacionesTable extends Migration
         Schema::create('cotizaciones', function (Blueprint $table) {
             $table->id();
             $table->text('descripcion');
+            $table->text('status');
+            $table->text('respuesta');
             $table->string('seriado');
             $table->float('iva');
             $table->float('MSRP');

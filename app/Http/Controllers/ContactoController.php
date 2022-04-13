@@ -29,7 +29,7 @@ class ContactoController extends Controller
  
     public function store(Request $request)
     {
-        if (Gate::allows('Gerente-Administrador')) {
+        
         $data = request()->validate([
             'nombre' => 'required | min:5',
             'email' => 'required | email',
@@ -55,8 +55,7 @@ class ContactoController extends Controller
 
 
         return redirect(route('index'));
-    }
-    return redirect(route('index'));
+   
     }
 
   

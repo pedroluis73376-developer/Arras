@@ -46,7 +46,7 @@
 <div class="card">
     <div class="card-body">
         <h2 class="featurette-heading">Lo Mas Vendido </h2>
-        <hr class="bg-success mb-6 mt-0 d-inline-block mx-auto" style="width:80vh; heught:2px">
+        <hr class="bg-success mb-6 mt-0 d-inline-block mx-auto" style="width:80vh; height:2px">
         <div class="row">
             <div class="container col-md-3">
                 <div class="card shadow-sm">

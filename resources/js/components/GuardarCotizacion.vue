@@ -2,7 +2,7 @@
     <input
         type="submit"
         class="btn btn-primary d-line mr-1"
-        value="Enviar Mensaje"
+        value="Enviar Cotizacion"
         @click="Guardar"
     />
 </template>
@@ -14,9 +14,9 @@ export default {
             this.$swal({
                 position: "center",
                 icon: "success",
-                title: "Gracias Por Contactarnos. ",
+                title: "Cotizacion Realizada. Esprere nuestra respuesta",
                 showConfirmButton: false,
-                timer: 2500,
+                timer: 2000,
             });
         },
     },
