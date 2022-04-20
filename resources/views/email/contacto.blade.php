@@ -23,10 +23,11 @@
         p {
             font-family: Arial, sans-serif;
         }
+
     </style>
 </head>
 
-<body style="margin:0;padding:0;">
+<body>
     <table role="presentation"
         style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
         <tr>
@@ -58,9 +59,8 @@
                                         <p><small>Email de contacto: {{$contacto->email}}</small></p>
                                         <p
                                             style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                            <a href="http://www.example.com"
-                                                style="color:#ee4c50;text-decoration:underline;">In tempus felis
-                                                blandit</a>
+                                            <p 
+                                                style="color:#1e1e1e;text-decoration:underline;">© 2021 Copyright 2022 XUBAX TECNOLOGÍA IN SITU Aviso de privacidad</>
                                         </p>
                                     </td>
                                 </tr>

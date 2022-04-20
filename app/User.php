@@ -44,6 +44,10 @@ class User extends Authenticatable
         return $this->belongsTo(TipoUsuario::class,'tipo_usuario_id');
     }
 
+    public function cotizacion (){
+        return $this->hasMany(cotizaciones::class,'id_usuario');
+    }
+
     public function adminlte_desc()
     {
         return 'That\'s a nice guy';

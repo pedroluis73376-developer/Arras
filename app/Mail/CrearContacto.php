@@ -32,6 +32,6 @@ class CrearContacto extends Mailable
     {
         //mandamos el mensaje mediante la vista creada donde se utilizo css puro
         $contacto = $this->data;
-        return $this->subject('Nuevo Mensaje Arras3888')->view('email.email',compact('contacto'));
+        return $this->subject('Nuevo Mensaje Arras3888')->view('email.contacto',compact('contacto'));
     }
 }

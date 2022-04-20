@@ -284,7 +284,7 @@ return [
 
         [
             'text' => 'cotizaciones',
-            'url'  => '#',
+            'route'  => 'cotizaciones.index',
             'icon' => 'fas fa-fw  fa-list-ul',
         ],
 

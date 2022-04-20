@@ -4,7 +4,7 @@
 @section('plugins.Vue', true)
 @section('plugins.MyVueComponents', true)
 @section('css')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
 @endsection
@@ -79,15 +79,16 @@
                                   
                                
                                 <div class="modal-footer">
-                                    <p><small>Email de Contacto : {{$mensaje->email}}</small> </p>
+                                    <p class="text-left"><small>Email: {{$mensaje->email}}</small> </p>
                                     <p> <small>Recibido : {{$mensaje->created_at}}</small> </p>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+                                    <hr>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar <i class="fa-solid fa-circle-xmark"></i></button>
 
                                     @if($mensaje->status == 'NL')
                                         <form action="{{ route('contactos.update', ['contacto'=>$mensaje->id])}}"  method="POST">
                                         @csrf
                                         @method('put') 
-                                        <button type="submit" class="btn btn-primary">Marcar como Leido</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check-double"></i></button>
                                     </form>
                                     @endif
                                     

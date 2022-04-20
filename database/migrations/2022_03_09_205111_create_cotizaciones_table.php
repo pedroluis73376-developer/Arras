@@ -25,6 +25,8 @@ class CreateCotizacionesTable extends Migration
             $table->float('utilidad_distribuidor');
             $table->float('SPIF');
             $table->float('plusvalizacion');
+            $table->foreignId('id_arra')->references('id')->on('arras');
+            $table->foreignId('id_usuario')->references('id')->on('users')->nullable;
             $table->timestamps();
         });
     }

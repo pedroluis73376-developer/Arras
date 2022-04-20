@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
     @yield('css')
 
 </head>
@@ -53,7 +53,7 @@
                         
                         @else
 
-                        @if(auth()->user()->tipo_usuario_id == 3)
+                        @if(auth()->user()->tipo_usuario_id == 3 || auth()->user()->tipo_usuario_id == 1)
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
                         </li>
@@ -68,7 +68,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Cotizaciones') }}</a>
+                            <a class="nav-link" href="{{ route('cotizaciones.user')}}">{{ __('Cotizaciones') }}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -100,8 +100,9 @@
     </div>
 
 @yield('footer')
-   
+
+ @yield('js')  
 </body>
-@yield('js')
+
 
 </html>

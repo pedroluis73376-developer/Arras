@@ -15,6 +15,7 @@
         <form id="app" method="POST" action="{{ route('contactos.store')}}" enctype="multipart/form-data" novalidate>
             @csrf
             <div class="row">
+                @guest
                 <div class="col-md-6">
                     <div class="md-form mb-0">
                         <input type="text" name="nombre" class="form-control @error ('nombre')is-invalid @enderror"
@@ -26,8 +27,22 @@
                         @enderror
                     </div>
                 </div>
-
-                <div class="col-md-6">
+                    @else
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" name="nombre" class="form-control @error ('nombre')is-invalid @enderror"
+                                id="nombre" value="{{auth()->user()->name}}" placeholder="Nombre ">
+                            @error('nombre')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                @endguest
+                
+                @guest
+                    <div class="col-md-6">
                     <div class="md-form mb-0">
                         <input type="text" name="email" class="form-control @error ('email')is-invalid @enderror"
                             id="email" value="{{old('email')}}" placeholder="Email ">
@@ -39,6 +54,22 @@
                     </div>
                 </div>
             </div>
+                @else
+                <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" name="email" class="form-control @error ('email')is-invalid @enderror"
+                            id="email" value="{{auth()->user()->email}}" placeholder="Email ">
+                        @error('email')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+                @endguest
+
+                
 
             <div class="row mt-2">
                 <div class="col-md-12">

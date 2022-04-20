@@ -67,7 +67,7 @@ Route::delete('/vueltas/{vuelta}', 'VueltaController@destroy')->name('vueltas.de
 //rutas de panel de administracion de arras
 Route::get('/arras', 'ArraController@index')->name('arras.index')->middleware('auth');
 Route::get('/arras/create', 'ArraController@create')->name('arras.create')->middleware('auth');
-Route::post('/arras/{arra}', 'ArraController@store')->name('arras.store')->middleware('auth');
+Route::post('/arras', 'ArraController@store')->name('arras.store')->middleware('auth');
 Route::get('/arras/{arra}/edit', 'ArraController@edit')->name('arras.edit')->middleware('auth');
 Route::put('/arras/{arra}', 'ArraController@update')->name('arras.update')->middleware('auth');
 
@@ -86,3 +86,6 @@ Route::put('/contactos/{contacto}', 'ContactoController@update')->name('contacto
 
 //ruta de cotizaciones
 Route::post('/cotizaciones', 'CotizacionesController@store')->name('cotizaciones.store');
+Route::get('/cotizaciones', 'CotizacionesController@index')->name('cotizaciones.index');
+Route::get('/cotizaciones/user', 'CotizacionesController@user')->name('cotizaciones.user');
+Route::put('/cotizaciones/{cotizacion}', 'CotizacionesController@update')->name('cotizaciones.update');

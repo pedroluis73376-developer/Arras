@@ -32,4 +32,8 @@ protected $fillable = [
     public function vuelta(){
         return $this->belongsTo(vuelta::class,'vueltas_id');
     }
+
+    public function cotizacion(){
+        return $this->hasMany(cotizaciones::class, 'id_arra');
+    }
 }
