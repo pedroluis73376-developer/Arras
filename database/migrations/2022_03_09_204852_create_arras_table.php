@@ -18,7 +18,9 @@ class CreateArrasTable extends Migration
             $table->string('clave');
             $table->string('nombre');
             $table->string('imgFrente');
+            $table->string('imgFrente2');
             $table->string('imgVuelta');
+            $table->string('imgVuelta2');
             $table->string('imgOpcional');
             $table->float('peso');
             $table->float('precio');

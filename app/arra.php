@@ -36,4 +36,24 @@ protected $fillable = [
     public function cotizacion(){
         return $this->hasMany(cotizaciones::class, 'id_arra');
     }
+
+    //creamos nuestro scope para realizar las filtraciones 
+    public function scopeBusqueda($query, $metal, $frente, $vuelta){
+        if($metal && $frente && $vuelta){
+            return $query->where('metales_id','=', $metal)->where('frentes_id','=',$frente)->where('vueltas_id','=', $vuelta);
+        }
+        if($metal && $frente ){
+            return $query->where('metales_id','=', $metal)->where('frentes_id','=',$frente)->where('vueltas_id','like', "%$vuelta%");
+        }
+        if($metal && $vuelta ){
+            return $query->where('metales_id','=', $metal)->where('frentes_id','like',"%$frente%")->where('vueltas_id','like', "%$vuelta%");
+        }
+        if($frente && $vuelta ){
+            return $query->where('metales_id','like', "%$metal%")->where('frentes_id','like',"%$frente%")->where('vueltas_id','like', "%$vuelta%");
+        }
+        
+
+    }
+
+
 }

@@ -22,22 +22,26 @@
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
+                                    <img src="/storage/{{$arra->imgFrente2}}" class="d-block w-100" style="height:60vh"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
                                     <img src="/storage/{{$arra->imgVuelta}}" class="d-block w-100" style="height:60vh"
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/storage/{{$arra->imgOpcional}}" class="d-block w-100" style="height:60vh"
+                                    <img src="/storage/{{$arra->imgVuelta2}}" class="d-block w-100" style="height:60vh"
                                         alt="...">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls"
                                 data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span style="background-color:darkgrey " class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-target="#carouselExampleControls"
                                 data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span style="background-color:darkgrey " class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </button>
                         </div>

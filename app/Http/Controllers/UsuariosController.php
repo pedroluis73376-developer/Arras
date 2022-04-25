@@ -51,7 +51,7 @@ class UsuariosController extends Controller
                 'last_name' => $data['apellido'],
                 'email' => $data['email'],
                 'tipo_usuario_id' => $data['categoria'],
-                'password' => Hash::make('arras12345'),
+                'password' => Hash::make('arras3888'),
             ]);
 
             return redirect(action('UsuariosController@index'));

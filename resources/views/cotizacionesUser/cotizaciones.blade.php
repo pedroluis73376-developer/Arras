@@ -8,9 +8,8 @@
 @endsection
 @section( 'content')
 
-<div class="col-md-10 mx-auto bg-white p-3">
+<div class="col-md-10 mx-auto bg-white p-3 mt-4 ">
 
-    <a href="{{route('distribuidor.create')}}" class="btn btn-primary mr-2 mb-2">Dar Alta</a>
     <table class="table" id="distribuidores">
         <thead class="bg-info text-light ">
             <tr>
@@ -93,12 +92,12 @@
                                         </div>
                                         <button class="carousel-control-prev" type="button"
                                             data-target="#carouselExampleControls{{$cotizacion->id}}" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span style="background-color:darkgrey " class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
                                         </button>
                                         <button class="carousel-control-next" type="button"
                                             data-target="#carouselExampleControls{{$cotizacion->id}}" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span style="background-color:darkgrey " class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </button>
                                     </div>
@@ -144,6 +143,10 @@
     </table>
 
 </div>
+<div class="mt-4">
+    @include('layouts/footer')
+</div>
+
 @endsection
 
 @section('js')
