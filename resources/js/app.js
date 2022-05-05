@@ -43,4 +43,5 @@ Vue.component('guardar-cotizacion', require('./components/GuardarCotizacion.vue'
 
 const app = new Vue({
     el: '#app',
+  
 });

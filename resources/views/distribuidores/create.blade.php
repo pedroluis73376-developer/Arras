@@ -56,7 +56,7 @@
                                         class=" input-lg form-control  @error ('direccion')is-invalid @enderror"
                                         id="direccion" value="{{old('direccion')}}"
                                         placeholder="Domicilio, Ciudad, Estado">
-                                    @error('email')
+                                    @error('direccion')
                                     <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{$message}}</strong>
                                     </span>

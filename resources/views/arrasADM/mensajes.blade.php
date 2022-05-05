@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'arras')
+@section('title', 'Mensajes')
 @section('plugins.Vue', true)
 @section('plugins.MyVueComponents', true)
 @section('css')

@@ -303,7 +303,7 @@ return [
         [
             'text'       => 'information',
             'icon_color' => 'cyan',
-            'url'        => '#',
+            'route'        => 'informacion.index',
             'icon' => 'fas fa-fw  fa-circle-info',
         ],
 

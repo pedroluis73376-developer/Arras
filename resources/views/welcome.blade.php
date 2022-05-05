@@ -11,24 +11,24 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/storage/upload-arras/arras1.png" class="d-block w-100" style="height:90vh" alt="...">
+                <img src="/storage/{{$informacion[0]->imgH1}}" class="d-block w-100" style="height:90vh" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Nuestros Productos</h5>
+                    <p>{{$informacion[0]->esloganH1}}</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/storage/upload-arras/arras2.jpg" class="d-block w-100 " style="height:90vh" alt="...">
+                <img src="/storage/{{$informacion[0]->imgH2}}" class="d-block w-100 " style="height:90vh" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5>Nosotros</h5>
+                    <p>{{$informacion[0]->esloganH2}}</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/storage/upload-arras/arras3.jpg" class="d-block w-100 " style="height:90vh" alt="...">
+                <img src="/storage/{{$informacion[0]->imgH3}}" class="d-block w-100 " style="height:90vh" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5>Somos tu mejor Opcion</h5>
+                    <p>{{$informacion[0]->esloganH3}}</p>
                 </div>
             </div>
         </div>
@@ -53,13 +53,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/upload-arras/arras2.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV1}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras1.png" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV2}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras3.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV3}}" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls"
@@ -76,9 +76,7 @@
 
 
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum dignissimos,
-                            in eius sint dolorum necessitatibus, modi, quos est odit quam corrupti enim! Distinctio
-                            corrupti saepe iusto! Repellat quibusdam ipsam consectetur.</p>
+                        <p class="card-text">{{$informacion[0]->descripcion1}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
@@ -96,13 +94,13 @@
                     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/upload-arras/arras2.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV4}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras1.png" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV5}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras3.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV6}}" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls2"
@@ -118,9 +116,7 @@
                     </div>
 
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere nisi
-                            culpa error nihil quasi ipsa debitis quod quibusdam repellendus amet quae optio aliquid
-                            nemo, adipisci eveniet voluptatibus ullam labore!</p>
+                        <p class="card-text">{{$informacion[0]->descripcion2}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
@@ -139,13 +135,13 @@
                     <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/upload-arras/arras2.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV7}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras1.png" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV8}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/arras3.jpg" class="d-block w-100" alt="...">
+                                <img src="/storage/{{$informacion[0]->imgMV9}}" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls3"
@@ -161,9 +157,7 @@
                     </div>
 
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et debitis magnam
-                            rerum atque harum suscipit temporibus? Recusandae exercitationem soluta aut delectus,
-                            perspiciatis quas facilis, saepe officia mollitia expedita labore ut.</p>
+                        <p class="card-text">{{$informacion[0]->descripcion3}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
@@ -184,32 +178,24 @@
         <div class="card-body">
             <div class="row text-center">
                 <div class="col-md-7 mt-1 align-center">
-                    <h2 class="featurette-heading">Diseños Unicos y Personalizados </h2>
+                    <h2 class="featurette-heading">{{$informacion[0]->titulo}} </h2>
                     <hr class="bg-success mb-6 mt-0 d-inline-block mx-auto" style="width:80vh; heught:2px">
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque temporibus hic
-                        quibusdam ratione
-                        quos, deleniti culpa nostrum illum autem facilis possimus porro blanditiis, voluptas beatae
-                        mollitia sint
-                        tempora. Laudantium, quasi.</p>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tenetur saepe cumque
-                        dolor. Minima
-                        eius odit aperiam, molestiae illo fugiat quas quibusdam, aut placeat impedit enim cum hic magni?
-                        Molestias.
-                    </p>
+                    <p class="lead">{{$informacion[0]->descripcion4}}</p>
+                    
                 </div>
                 <div class="col-md-5 ">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/upload-arras/f2ZzfQdRhEjmYC0ic0A8pKUe95tBsXpErcFT6qdV.png"
+                                <img src="/storage/{{$informacion[0]->imgF1}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/jk33xhlKjFmGolux3nTrCfxumuC9CMYgHovopE1K.png"
+                                <img src="/storage/{{$informacion[0]->imgF2}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/PD5nTeUPu0DWo9DUYKOzesqeopXo7hdkOfyxF7e1.png"
+                                <img src="/storage/{{$informacion[0]->imgF3}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                         </div>
@@ -235,32 +221,24 @@
         <div class="card-body">
             <div class="row text-center">
                 <div class="col-md-7 mt-1 order-md-2 align-center">
-                    <h2 class="featurette-heading">Diseños Unicos y Personalizados </h2>
+                    <h2 class="featurette-heading">{{$informacion[0]->titulo2}}</h2>
                     <hr class="bg-success mb-6 mt-0 d-inline-block mx-auto" style="width:80vh; heught:2px">
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque temporibus hic
-                        quibusdam ratione
-                        quos, deleniti culpa nostrum illum autem facilis possimus porro blanditiis, voluptas beatae
-                        mollitia sint
-                        tempora. Laudantium, quasi.</p>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tenetur saepe cumque
-                        dolor. Minima
-                        eius odit aperiam, molestiae illo fugiat quas quibusdam, aut placeat impedit enim cum hic magni?
-                        Molestias.
+                    <p class="lead">{{$informacion[0]->descripcion5}}</p>
                     </p>
                 </div>
                 <div class="col-md-5 order-md-1">
                     <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/storage/upload-arras/f2ZzfQdRhEjmYC0ic0A8pKUe95tBsXpErcFT6qdV.png"
+                                <img src="/storage/{{$informacion[0]->imgF4}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/jk33xhlKjFmGolux3nTrCfxumuC9CMYgHovopE1K.png"
+                                <img src="/storage/{{$informacion[0]->imgF5}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/storage/upload-arras/PD5nTeUPu0DWo9DUYKOzesqeopXo7hdkOfyxF7e1.png"
+                                <img src="/storage/{{$informacion[0]->imgF6}}"
                                     class="d-block w-100" style="height:60vh" alt="...">
                             </div>
                         </div>

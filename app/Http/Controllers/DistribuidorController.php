@@ -16,8 +16,9 @@ class DistribuidorController extends Controller
     {
         //aqui utilizamos las gate para dar acceso si el usuario es administrador o gerente 
         if (Gate::allows('Gerente-Administrador')) {
+            $categorias = TipoUsuario::all(['id', 'puesto'])->where('id','>',3);
             $distribuidores = User::all();
-            return view('distribuidores.index', compact('distribuidores'));
+            return view('distribuidores.index', compact('distribuidores','categorias'));
         }
 
         return redirect(route('index'));
@@ -47,7 +48,8 @@ class DistribuidorController extends Controller
                 'email' => 'required | email',
                 'direccion' => 'required',
                 'telefono' => 'required',
-                'categoria' => 'required',
+                'categoria' => '',
+                'sweetalert' => 'required'
                 //'imagen'=>'required|image',
             ]);
 
@@ -63,7 +65,9 @@ class DistribuidorController extends Controller
             ]);
 
             //redireccionamos despues de agregar los valores a la base de datos
-            return redirect(action('DistribuidorController@index'));
+           
+            
+            return redirect(route('distribuidor.index'));
         }
         return redirect(route('index'));
     }
@@ -72,6 +76,8 @@ class DistribuidorController extends Controller
     public function show(User $distribuidor)
     {
         //
+
+        
     }
 
 
@@ -95,7 +101,7 @@ class DistribuidorController extends Controller
                 'nombre' => 'required | min:4',
                 'apellido' => 'required',
                 'email' => 'required | email',
-                'direccion' => 'required',
+                'direccion' => '',
                 'telefono' => 'required',
                 'categoria' => 'required',
                 //'imagen'=>'image',

@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+Route::get('/', 'HomeController@welcome')->name('index');
 
 Auth::routes();
 
@@ -85,7 +83,16 @@ Route::post('/contactos', 'ContactoController@store')->name('contactos.store');
 Route::put('/contactos/{contacto}', 'ContactoController@update')->name('contactos.update')->middleware('auth');
 
 //ruta de cotizaciones
-Route::post('/cotizaciones', 'CotizacionesController@store')->name('cotizaciones.store');
-Route::get('/cotizaciones', 'CotizacionesController@index')->name('cotizaciones.index');
-Route::get('/cotizaciones/user', 'CotizacionesController@user')->name('cotizaciones.user');
-Route::put('/cotizaciones/{cotizacion}', 'CotizacionesController@update')->name('cotizaciones.update');
+Route::post('/cotizaciones', 'CotizacionesController@store')->name('cotizaciones.store')->middleware('auth');
+Route::get('/cotizaciones', 'CotizacionesController@index')->name('cotizaciones.index')->middleware('auth');
+Route::get('/cotizaciones/user', 'CotizacionesController@user')->name('cotizaciones.user')->middleware('auth');
+Route::put('/cotizaciones/{cotizacion}', 'CotizacionesController@update')->name('cotizaciones.update')->middleware('auth');
+
+//rutas para editar la infomacion de la pantalla de inicio
+Route::get('/informacion', 'HomeController@welcomeADM')->name('informacion.index');
+Route::put('/informacion/{informacion}', 'HomeController@updateHeader')->name('informacion.updateHeader');
+Route::put('/informacion2/{informacion}', 'HomeController@updateLMV1')->name('informacion.updateLMV1');
+Route::put('/informacion3/{informacion}', 'HomeController@updateLMV2')->name('informacion.updateLMV2');
+Route::put('/informacion4/{informacion}', 'HomeController@updateLMV3')->name('informacion.updateLMV3');
+Route::put('/informacion5/{informacion}', 'HomeController@updateFotter1')->name('informacion.updateFotter1');
+Route::put('/informacion6/{informacion}', 'HomeController@updateFotter2')->name('informacion.updateFotter2');

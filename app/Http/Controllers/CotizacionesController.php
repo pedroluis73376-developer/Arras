@@ -59,7 +59,7 @@ class CotizacionesController extends Controller
             'id_arra' => $data['arra'],
             'plusvalizacion' => 0,
             'created_at' => date('Y:m:d H:i:s'),
-            'updated_at' => date('Y:m:d H:i:s'),
+            
         ]);
 
 
@@ -92,7 +92,7 @@ class CotizacionesController extends Controller
             'mensaje' => 'required',
             'email' => 'required'
         ]);
-
+        //mandamos un correo de notificacion a nuestro cliente 
         if($cotizacion->status == 'NR'){
             Mail::to($data['email'])->send(new RespuestaCotizacion($usuario, $data));
             $cotizacion->updated_at= date('Y:m:d H:i:s');
