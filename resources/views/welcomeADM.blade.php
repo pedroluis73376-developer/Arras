@@ -1034,9 +1034,9 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-primary mb-2" data-toggle="modal"
-    data-target="#exampleModalCenter5">
-    Editar
-</button>
+                                 data-target="#exampleModalCenter5">
+                                 Editar
+                                </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog"
@@ -1219,13 +1219,16 @@
     <div class="">
         <div class="card col-md-12 mt-2">
             <div class="card-body">
+                
                 <div class="row text-center">
-                    <div class="col-md-7 mt-1 order-md-2 align-center">
+                    
+                    <div class="col-md-7 mt-1 order-md-2 align-left">
 
-                        <h2 class="featurette-heading">{{$informacion[0]->titulo2}} </h2> <button type="button" class="btn btn-sm btn-outline-primary mb-2" data-toggle="modal"
+                        <button type="button" class="btn btn-sm btn-outline-primary text-left" data-toggle="modal"
                         data-target="#exampleModalCenter6">
                         Editar
-                    </button>
+                       </button>
+                          
                     
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog"
@@ -1361,7 +1364,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <h2 class="featurette-heading ">{{$informacion[0]->titulo2}} </h2>
                         <hr class="bg-success mb-6 mt-0 d-inline-block mx-auto" style="width:80vh; heught:2px">
                         <p class="lead">{{$informacion[0]->descripcion5}}</p>
 

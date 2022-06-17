@@ -231,23 +231,11 @@ return [
 
         [
             'text'        => 'Distribuidores',
-            'url'         => '#',
+            'route' => 'distribuidor.index',
             'icon'        => 'fas fa-fw fa-user',
             
             'label_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Ver Lista',
-                    'route' => 'distribuidor.index',
-                    'icon' => 'fas fa-fw fa-clone',
-                ],
-                [
-                    'text' => 'Agregar Distribuidor',
-                    'route' => 'distribuidor.create',
-                    'icon' => 'fas fa-fw fa-pencil',
-                ],
-
-            ]
+           
         ],
         [
             'text'    => 'Arras',

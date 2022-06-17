@@ -13,12 +13,6 @@
 
 <div class="col-md-12 mx-auto bg-white p-3">
 
-    @if(isset($sweetalert))
-
-
-
-    @endif
-
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal0">
         <i class="fa-solid fa-file-circle-plus"></i> Nuevo Distribuidor
@@ -154,7 +148,7 @@
         <thead class="bg-info text-light ">
             <tr>
                 <th scole="col ">Nombre</th>
-                <th scole="col ">Apellido</th>
+              
                 <th scole="col ">Email</th>
                 <th scole="col ">Direccion</th>
                 <th scole="col ">telefono</th>
@@ -170,10 +164,10 @@
             @foreach($distribuidores as $distribuidor)
             @if($distribuidor->tipo_usuario_id > 3)
             <tr>
-                <td>{{$distribuidor->name}}</td>
-                <td>{{$distribuidor->last_name}}</td>
+                <td>{{$distribuidor->name}} {{$distribuidor->last_name}}</td>
+                
                 <td>{{$distribuidor->email}}</td>
-                <td>{{$distribuidor->direccion}}</td>
+                <td style="max-width:200px">{{$distribuidor->direccion}}</td>
                 <td>{{$distribuidor->telefono}}</td>
                 <td>{{$distribuidor->tipo->puesto}}</td>
                 <td>
@@ -319,7 +313,7 @@
 
                 </td>
                 <td>
-                    <a href="" class="btn btn-success mr-2 mt-1 d-line"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{ route('distribuidor.show', ['distribuidor'=>$distribuidor->id]) }}" class="btn btn-success mr-2 mt-1 d-line"><i class="fa-solid fa-eye"></i></a>
                 </td>
 
             </tr>

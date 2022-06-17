@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'usuarioes')
+@section('title', 'usuarios')
 @section('plugins.Vue', true)
 @section('plugins.MyVueComponents', true)
 
@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <div class="row justify-content-center mt-3">
                         <div class="col-md-7">
-                            <form id="app" method="POST" action="{{ route('usuarios.update', ['usuario'=> $usuario->id]) }}" enctype="multipart/form-data"
+                            <form id="app" method="POST" action="{{ route('usuario.update', ['usuario'=> $usuario->id]) }}" enctype="multipart/form-data"
                                 novalidate>
                                 @csrf
                                 @method('put')
@@ -55,27 +55,33 @@
                                     @enderror
                                 </div>
 
+                                
+
                                 <div class="form-group">
-                                    <label for="categoria">Puesto Usuario</label>
-                                    <select name="categoria"
-                                        class="form-control @error('categoria') is-invalid @enderror" id="categoria">
-                                        <option value="">--seleccione--</option>
-
-                                        @foreach($categorias as $categoria)
-                                        @if($categoria->id < 3)
-                                        <option value="{{$categoria->id}}" {{$usuario->tipo_usuario_id==$categoria->id ?
-                                            'selected' : '' }}>{{$categoria->puesto}}</option>
-                                        @endif
-
-                                        @endforeach
-                                    </select>
-                                    @error('categoria')
+                                    <label for="telefono">Telefono:</label>
+                                    <input type="text" name="telefono"
+                                        class="form-control @error ('telefono')is-invalid @enderror" id="telefono"
+                                        value="{{$usuario->telefono}}" placeholder="45266332120">
+                                    @error('telefono')
                                     <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{$message}}</strong>
                                     </span>
                                     @enderror
-
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" name="password"
+                                        class="form-control @error ('password')is-invalid @enderror" id="password"
+                                        value="" placeholder="">
+                                    @error('password')
+                                    <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
+                                
 
                                 <modificar-datos>
 

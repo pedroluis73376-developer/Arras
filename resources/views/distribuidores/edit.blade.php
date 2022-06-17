@@ -1,7 +1,4 @@
-@extends('adminlte::page')
-
-@section('title', 'Editar Dist')
-
+@extends('layouts/app')
 @section('content')
 
 
@@ -9,14 +6,14 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h2 class="text-center">Modificar Datos Distribuidor</h2>
+                <h2 class="text-center">Actualizar Datos</h2>
             </div>
 
             <div class="card-body">
                 <div class="row justify-content-center mt-3">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <form id="app" method="POST"
-                            action="{{ route('distribuidor.update', ['distribuidor'=> $distribuidor->id]) }}"
+                            action="{{ route('user.update', ['distribuidor'=> $distribuidor->id]) }}"
                             enctype="multipart/form-data" novalidate>
                             @csrf
                             @method('put')
@@ -55,10 +52,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="direccion">Direccion:</label>
-                                <input type="text" name="direccion"
-                                    class=" input-lg form-control  @error ('direccion')is-invalid @enderror"
-                                    id="direccion" value="{{$distribuidor->direccion}}"
-                                    placeholder="Domicilio, Ciudad, Estado">
+                                <textarea type="text" name="direccion" id="direccion" cols="30" rows="5"
+                            class="form-control @error ('direccion')is-invalid @enderror" value="{{old('direccion')}}"
+                            placeholder="Calle # , Ciudad, Estado, CP">{{$distribuidor->direccion}}
+
+
+                        </textarea>
+                        @error('direccion')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
                                 @error('email')
                                 <span class="invalid-feedback d-block" role="alert">
                                     <strong>{{$message}}</strong>
@@ -77,24 +81,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label for="categoria">Categoria Distribuidor </label>
-                                <select name="categoria" class="form-control @error('categoria') is-invalid @enderror"
-                                    id="categoria">
-                                    <option value="">--seleccione--</option>
-                                    @foreach($categorias as $categoria)
-
-                                    <option value="{{$categoria->id}}" {{$distribuidor->tipo_usuario_id==$categoria->id
-                                        ? 'selected' : '' }}>{{$categoria->puesto}}</option>
-                                    @endforeach
-                                </select>
-                                @error('categoria')
-                                <span class="invalid-feedback d-block" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
-
-                            </div>
+                            
 
                           <modificar-datos>
 

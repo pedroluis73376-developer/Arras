@@ -18,13 +18,16 @@ Route::get('/', 'HomeController@welcome')->name('index');
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard')->middleware('auth');
 
 //rutas del distribuidor
 Route::get('/distribuidores', 'DistribuidorController@index')->name('distribuidor.index')->middleware('auth');
 Route::get('/distribuidores/create', 'DistribuidorController@create')->name('distribuidor.create')->middleware('auth');
 Route::post('/distribuidores', 'DistribuidorController@store')->name('distribuidor.store')->middleware('auth');
 Route::get('/distribuidores/{distribuidor}', 'DistribuidorController@show')->name('distribuidor.show')->middleware('auth');
+//editamos los datos de nuestro usuario distribuidor logueado
+Route::put('/distribuidor/{distribuidor}', 'DistribuidorController@update_user')->name('user.update')->middleware('auth');
+//
 Route::get('/distribuidores/{distribuidor}/edit', 'DistribuidorController@edit')->name('distribuidor.edit')->middleware('auth');
 Route::put('/distribuidores/{distribuidor}', 'DistribuidorController@update')->name('distribuidor.update')->middleware('auth');
 Route::delete('/distribuidores/{distribuidor}', 'DistribuidorController@destroy')->name('distribuidor.destroy')->middleware('auth');
@@ -36,6 +39,7 @@ Route::post('/usuarios', 'UsuariosController@store')->name('usuarios.store')->mi
 Route::get('/usuarios/{usuario}', 'UsuariosController@show')->name('usuarios.show')->middleware('auth');
 Route::get('/usuarios/{usuario}/edit', 'UsuariosController@edit')->name('usuarios.edit')->middleware('auth');
 Route::put('/usuarios/{usuario}', 'UsuariosController@update')->name('usuarios.update')->middleware('auth');
+Route::put('/usuario/{usuario}', 'UsuariosController@update_user')->name('usuario.update')->middleware('auth');//editamos los datos de nuestro usuario administrador logeado
 Route::delete('/usuarios/{usuario}', 'UsuariosController@destroy')->name('usuarios.destroy')->middleware('auth');
 
 //rutas metales 

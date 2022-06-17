@@ -79,7 +79,7 @@
                         <p class="card-text">{{$informacion[0]->descripcion1}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
+                                <a href="{{ route('arras.show', ['arra'=>$informacion[0]->arra_id1]) }}" class="btn btn-sm btn-outline-secondary">Informacion</a>
 
                             </div>
 
@@ -119,7 +119,7 @@
                         <p class="card-text">{{$informacion[0]->descripcion2}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
+                                <a href="{{ route('arras.show', ['arra'=>$informacion[0]->arra_id2]) }}" class="btn btn-sm btn-outline-secondary">Informacion</a>
 
                             </div>
 
@@ -160,7 +160,7 @@
                         <p class="card-text">{{$informacion[0]->descripcion3}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Informacion</button>
+                                <a href="{{ route('arras.show', ['arra'=>$informacion[0]->arra_id3]) }}" class="btn btn-sm btn-outline-secondary">Informacion</a>
                             </div>
 
                         </div>

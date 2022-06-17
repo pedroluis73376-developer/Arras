@@ -55,7 +55,7 @@ class User extends Authenticatable
 
     public function adminlte_profile_url()
     {
-        return 'profile/username';
+        return route('usuarios.edit',['usuario' => auth()->user()->id]);
     }
       public function adminlte_image()
     {

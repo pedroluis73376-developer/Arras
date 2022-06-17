@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Storage;
 class HomeController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function welcome()
     {
@@ -347,7 +347,7 @@ class HomeController extends Controller
             $arra = arra::select(DB::raw('COUNT(*) as count'))->pluck('count');
 
 
-            //realizamos el conteo de nuestras cotizaciones durante los mese
+            //realizamos el conteo de nuestras cotizaciones durante los meses
             $cotizaciones = cotizaciones::select(DB::raw("COUNT(*) as count"))
                 ->whereYear('created_at', date('Y'))
                 ->groupBy(DB::raw("Month(created_at)"))

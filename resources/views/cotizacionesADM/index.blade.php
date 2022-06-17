@@ -127,7 +127,7 @@
 
                                     <div class="card mr-4">
                                         <div class="card-header">
-                                            <h6 class="container">Mensaje:</h6>
+                                            <h6 class="container">{{$cotizacion->usuario->name}} {{$cotizacion->usuario->last_name}}</h6>
                                         </div>
                                         <div class="card-body">
                                             <p class="overflow-auto" style="max-height: 25vh">

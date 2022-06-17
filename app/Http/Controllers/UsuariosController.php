@@ -17,7 +17,8 @@ class UsuariosController extends Controller
         if (Gate::allows('Gerente-Administrador')) {
             //llamamos la vita de usuarios pero mandamos un arra para desplegarlos en una tabla
             $usuarios = User::all();
-            return view('usuarios.index', compact('usuarios'));
+            $categorias = TipoUsuario::all();
+            return view('usuarios.index', compact('usuarios', 'categorias'));
         }
         return redirect(route('index'));
     }
@@ -76,6 +77,32 @@ class UsuariosController extends Controller
         return redirect(route('index'));
     }
 
+    public function update_user(Request $request, User $usuario)
+    {
+        if (Gate::allows('Gerente-Administrador')) {
+            //
+            $data = request()->validate([
+                'nombre' => 'required | min:4',
+                'apellido' => 'required | min: 4',
+                'email' => 'required | email',
+                'telefono' => 'required',
+                'password' => '',
+                //'imagen'=>'required|image',
+            ]);
+
+            if($data['password']){
+                $usuario->password = Hash::make($data['password']);
+            }
+            $usuario->name = $data['nombre'];
+            $usuario->last_name = $data['apellido'];
+            $usuario->email = $data['email'];
+            $usuario->telefono = $data['telefono'];
+
+            $usuario->save();
+            return redirect(action('UsuariosController@index'));
+        }
+        return redirect(route('index'));
+    }
 
     public function update(Request $request, User $usuario)
     {
@@ -86,6 +113,7 @@ class UsuariosController extends Controller
                 'apellido' => 'required | min: 4',
                 'email' => 'required | email',
                 'categoria' => 'required',
+                'telefono' => 'required',
                 //'imagen'=>'required|image',
             ]);
 
@@ -93,6 +121,7 @@ class UsuariosController extends Controller
             $usuario->last_name = $data['apellido'];
             $usuario->email = $data['email'];
             $usuario->tipo_usuario_id = $data['categoria'];
+            $usuario->telefono = $data['telefono'];
 
             $usuario->save();
             return redirect(action('UsuariosController@index'));
